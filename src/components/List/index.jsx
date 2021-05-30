@@ -1,20 +1,9 @@
-import Card from '../Card';
-
 import styles from './styles.module.scss';
 
-export default function List({ todos }) {
+export default function ListTodo({ title }) {
   return (
     <div className={styles.container}>
-      <h1>Doing</h1>
-
-      {todos.map(todo => {
-        return (
-          <Card
-            key={todo.id}
-            todo={todo}
-          />
-        )
-      })}
+      <h1>{title}</h1>
     </div>
   );
 }

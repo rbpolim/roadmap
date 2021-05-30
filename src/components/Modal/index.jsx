@@ -1,12 +1,9 @@
-import { useContext } from 'react';
 import ReactModal from 'react-modal';
+import { useContext } from 'react';
 
-import { BiCommentAdd } from 'react-icons/bi';
 import { TodosContext } from '../../contexts/TodosContext';
 
-import styles from './styles.module.scss'
-
-export default function TodoForm() {
+export default function Modal() {
   const {
     isOpen,
     inputTask,
@@ -18,16 +15,7 @@ export default function TodoForm() {
   } = useContext(TodosContext);
 
   return (
-    <div className={styles.container}>
-      <h1>What do you want to do?</h1>
-
-      <button
-        className={styles.buttonOpenModal}
-        onClick={handleModal}
-      >
-        <BiCommentAdd size={30} />
-      </button>
-
+    <div>
       <ReactModal
         isOpen={isOpen}
         onRequestClose={handleModal}
