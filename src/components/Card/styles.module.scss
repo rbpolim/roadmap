@@ -1,28 +1,56 @@
 .containerCard {
-  opacity: 1;
+  background-color: #fafafa;
 
-  background-color: var(--purple-100);
+  border: 1px solid var(--background);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 24px;
+  cursor: grab;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  border-radius: 6px;
-  margin-top: 12px;
-  padding: 30px;
 
-  box-shadow: 2px -2px 6px 0px var(--white);
+  &:hover {
+    transform: translateX(4px);
+  }
 
-  h1 {
+  h3 {
+    color: #333;
     font-size: 24px;
+    margin: 16px 0 8px 0;
+    font-weight: normal;
   }
 
   div {
-    margin-top: 8px;
-    padding: 6px;
+    display: flex;
+    align-items: center;
 
     button {
-      margin-left: 8px;
+      background-color: var(--purple-100);
+
+      & + button {
+        background-color:#d00000;
+        color: #fff;
+      }
+
+      &:hover {
+        filter: brightness(0.95)
+      }
+
+      &:active {
+        scale: 0.8;
+      }
+    }
+
+    span {
+      background-color: yellow;
+      border: 1px solid var(--background);
+      padding: 8px;
+      border-radius: 5px;
+      color: #000;
+      font-weight: bold;
+      font-style: italic;
     }
   }
 }
@@ -31,28 +59,32 @@
   opacity: 0.25;
 
   background-color: var(--purple-100);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  border: 1px dashed var(--background);
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 24px;
+  cursor: not-allowed;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  border-radius: 6px;
-  margin-top: 12px;
-  padding: 30px;
 
-  box-shadow: 2px -2px 6px 0px var(--white);
-
-  h1 {
-    font-size: 24px;
-    text-decoration: line-through;
+  h3 {
+    color: #fff;
+    margin: 16px 0 8px 0;
   }
 
   div {
-    margin-top: 8px;
-    padding: 6px;
+    display: flex;
+    align-items: center;
 
-    button {
-      margin-left: 8px;
+    span {
+      background-color: #fff;
+      border: 1px dashed var(--background);
+      padding: 8px;
+      border-radius: 5px;
+      color: #000;
+      font-weight: bold;
     }
   }
 }

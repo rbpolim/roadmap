@@ -10,22 +10,27 @@ export default function Card({ todo }) {
 
   return (
     <div className={todo.isCompleted ? styles.containerCardCompleted : styles.containerCard }>
-      <span>{todo.tag}</span>
-      <h1>{todo.text}</h1>
-
       <div>
-        <button
-          onClick={(event) => handleCompleteTask(event, todo.id)}
-        >
-          <MdDone size={20}/>
-        </button>
+        <span>{todo.tag}</span>
 
-        <button
-          onClick={(event) => handleDeleteTask(event, todo.id)}
-        >
-          <MdDelete size={20}/>
-        </button>
+        <div>
+          <button
+            // className={styles.buttonCompleted}
+            onClick={(event) => handleCompleteTask(event, todo.id)}
+          >
+            <MdDone size={20}/>
+          </button>
+
+          <button
+            // className={styles.buttonDelete}
+            onClick={(event) => handleDeleteTask(event, todo.id)}
+          >
+            <MdDelete size={20}/>
+          </button>
+        </div>
       </div>
+
+      <h3>{todo.text}</h3>
     </div>
   )
 }

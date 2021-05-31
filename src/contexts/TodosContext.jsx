@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react';
 import { v4 as uuidV4 } from 'uuid';
 
-export const TodosContext = createContext([])
+export const TodosContext = createContext([]);
 
 export function TodosProvider({ children }) {
   const [todos, setTodos] = useState([])

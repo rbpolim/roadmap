@@ -3,6 +3,8 @@ import { useContext } from 'react';
 
 import { TodosContext } from '../../contexts/TodosContext';
 
+import styles from './styles.module.scss';
+
 export default function Modal() {
   const {
     isOpen,
@@ -31,11 +33,11 @@ export default function Modal() {
           content: {
             position: 'absolute',
             top: '200px',
-            left: '500px',
-            right: '500px',
-            bottom: '200px',
-            border: '1px solid #ccc',
-            background: '#fff',
+            left: '600px',
+            right: '600px',
+            bottom: '300px',
+            border: '0px',
+            background: '#7d5fff',
             overflow: 'auto',
             WebkitOverflowScrolling: 'touch',
             borderRadius: '4px',
@@ -45,7 +47,7 @@ export default function Modal() {
           }
         }}
       >
-        <form>
+        <form className={styles.container}>
           <h1>Task</h1>
 
           <input

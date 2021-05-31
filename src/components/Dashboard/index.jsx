@@ -6,8 +6,7 @@ export default function Dashboard() {
   return (
     <div className={styles.containerDashboard}>
       <ListTodo />
-      <List title={"Doing"}/>
-      <List title={"Done"}/>
+      <List title={"In process"}/>
     </div>
   );
 }

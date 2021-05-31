@@ -1,16 +1,24 @@
 import { useContext } from 'react'
 import { TodosContext } from '../../contexts/TodosContext'
 
+import { BiCommentAdd } from 'react-icons/bi';
+
 import Card from '../Card';
 
 import styles from './styles.module.scss';
 
 export default function ListTodo() {
-  const { todos } = useContext(TodosContext)
+  const { todos, handleModal } = useContext(TodosContext)
 
   return (
     <div className={styles.container}>
-      <h1>To do</h1>
+      <div>
+        <h1>To do</h1>
+
+        <button onClick={handleModal}>
+          <BiCommentAdd size={30} />
+        </button>
+      </div>
 
       {todos.map(todo => {
         return (
