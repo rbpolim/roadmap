@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import { TodosContext } from '../../contexts/TodosContext'
-
 import { BiCommentAdd } from 'react-icons/bi';
 
+import { TodosContext } from '../../contexts/TodosContext'
 import Card from '../Card';
+import Modal from '../Modal';
 
 import styles from './styles.module.scss';
 
@@ -19,6 +19,8 @@ export default function ListTodo() {
           <BiCommentAdd size={30} />
         </button>
       </div>
+
+      <Modal />
 
       {todos.map(todo => {
         return (

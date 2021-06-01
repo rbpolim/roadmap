@@ -5,22 +5,22 @@ import { TodosContext } from '../../contexts/TodosContext';
 
 import styles from './styles.module.scss';
 
-export default function Modal() {
+export default function ModalProgress() {
   const {
-    isOpen,
+    isOpenProgress,
     inputTask,
     inputTag,
-    handleModal,
+    handleModalProgress,
     handleChangeTask,
     handleChangeTag,
-    handleCreateTodo,
+    handleCreateInProgress,
   } = useContext(TodosContext);
 
   return (
     <div>
       <ReactModal
-        isOpen={isOpen}
-        onRequestClose={handleModal}
+        isOpen={isOpenProgress}
+        onRequestClose={handleModalProgress}
         style={{
           overlay: {
             position: 'fixed',
@@ -42,7 +42,7 @@ export default function Modal() {
             WebkitOverflowScrolling: 'touch',
             borderRadius: '4px',
             outline: 'none',
-            padding: '12px',
+            padding: '20px',
             color: 'black',
           }
         }}
@@ -52,7 +52,7 @@ export default function Modal() {
 
           <input
             type="text"
-            placeholder="What you want to do..."
+            placeholder="What you want to do... "
             name="text"
             value={inputTask}
             onChange={handleChangeTask}
@@ -66,7 +66,7 @@ export default function Modal() {
             onChange={handleChangeTag}
           />
 
-          <button onClick={handleCreateTodo}>ADD TO DO</button>
+          <button onClick={handleCreateInProgress}>ADD TASK IN PROGRESS</button>
         </form>
       </ReactModal>
     </div>
