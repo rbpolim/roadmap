@@ -18,10 +18,9 @@ https://roadmap-plum.vercel.app/
 ## Features
 
 - Create tasks within columns;
-- Be able to tag and tag as tasks;
+- Be able to tag a task;
 - Be able to create multiple task boards;
 - Delete tasks;
-
 
 ## Run Locally
 
