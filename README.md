@@ -5,11 +5,6 @@
 
 This project is a to-do list designed to help you become more productive, keep track of everything on one page, organize your hourly schedule and tasks schedule and use time wisely.
 
-## Demo
-
-https://roadmap-plum.vercel.app/
-
-
 ## Tech Stack
 
 **Client:** Next.JS, SASS
